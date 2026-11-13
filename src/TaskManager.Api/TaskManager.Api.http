@@ -1,0 +1,17 @@
+### Arquivo de requisições HTTP.
+### No VS Code (extensão REST Client) ou Visual Studio / Rider, clique em "Send Request" acima de cada bloco.
+
+@host = http://localhost:5039
+
+### Verifica se a API está no ar
+GET {{host}}/health
+
+### Lista todas as tarefas
+GET {{host}}/tarefas
+Accept: application/json
+
+### Busca uma tarefa que existe (espera 200)
+GET {{host}}/tarefas/1
+
+### Busca uma tarefa que NÃO existe (espera 404)
+GET {{host}}/tarefas/999
